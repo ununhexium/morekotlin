@@ -1,4 +1,5 @@
 val assertJVersion = "3.9.1"
+val guavaVersion = "24.1-jre"
 val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
 
@@ -28,6 +29,7 @@ dependencies {
 
   testImplementation("org.assertj:assertj-core:$assertJVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+  testImplementation("com.google.guava:guava:$guavaVersion")
 
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
