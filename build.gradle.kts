@@ -1,4 +1,5 @@
 val assertJVersion = "3.9.1"
+val coroutinesVersion = "0.22.5"
 val guavaVersion = "24.1-jre"
 val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
@@ -26,6 +27,7 @@ version = "0.1.0-SNAPSHOT"
 dependencies {
   compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   compile("org.jetbrains.kotlin:kotlin-reflect")
+  compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 
   testImplementation("org.assertj:assertj-core:$assertJVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
