@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 val assertJVersion = "3.9.1"
 val coroutinesVersion = "0.22.5"
 val guavaVersion = "24.1-jre"
@@ -10,6 +12,10 @@ plugins {
   id("org.jetbrains.kotlin.jvm") version kotlinVersion
   java
   idea
+}
+
+tasks.withType<KotlinCompile> {
+  kotlinOptions.jvmTarget = "1.8"
 }
 
 idea {
