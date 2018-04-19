@@ -2,10 +2,8 @@ package net.lab0.tools
 
 import com.google.common.io.Resources
 import org.assertj.core.api.Assertions.assertThat
-import org.assertj.core.api.Assertions.fail
 import org.junit.jupiter.api.Test
 import java.nio.charset.StandardCharsets
-import kotlin.system.measureNanoTime
 
 class PrimesSequenceTest
 {
@@ -24,9 +22,9 @@ class PrimesSequenceTest
     val computedPrimes = primes.take(knownPrimes.size).toList()
     assertThat(computedPrimes).isEqualTo(knownPrimes)
   }
-  
+
   @Test
-  fun `getting primes again starts from the begining`()
+  fun `getting primes again starts from the beginning`()
   {
     val firstTake = primes.take(100)
     val secondTake = primes.take(100)

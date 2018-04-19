@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test
 
 class MoreStringsTest
 {
-    @Test
-    fun `more!!!`()
-    {
-        val more = "sample".more()
-        assertThat(more).isNotNull
-    }
+  @Test
+  fun `more !!!`()
+  {
+    val more = "sample".more()
+    assertThat(more).isNotNull
+  }
 
-    @Test
-    fun `collapses white spaces like "white-space normal" CSS property`()
-    {
-        val more = """
+  @Test
+  fun `collapses white spaces like "white-space normal" CSS property`()
+  {
+    val more = """
           |ABC
           |          XYZ
           |      FOO
@@ -25,6 +25,6 @@ class MoreStringsTest
           |
           |BAR
         """.trimMargin().more()
-        assertThat(more.collapseWhiteSpaces()).isEqualTo("ABC XYZ FOO BAR")
-    }
+    assertThat(more.collapseWhiteSpaces()).isEqualTo("ABC XYZ FOO BAR")
+  }
 }

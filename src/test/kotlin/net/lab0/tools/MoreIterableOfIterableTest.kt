@@ -7,7 +7,7 @@ import org.junit.jupiter.api.TestFactory
 
 internal class MoreIterableOfIterableTest
 {
-  fun iterableOfSize(size: Int): Iterable<Any?>
+  private fun iterableOfSize(size: Int): Iterable<Any?>
   {
     return (0 until size)
   }

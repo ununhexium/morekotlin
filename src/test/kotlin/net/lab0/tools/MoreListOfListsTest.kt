@@ -1,18 +1,15 @@
 package net.lab0.tools
 
-import com.google.common.collect.Sets
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.DynamicTest
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestFactory
 import org.junit.jupiter.api.assertThrows
 
 internal class MoreListOfListsTest
 {
   companion object
   {
-    val BIG_VALUE = Int.MAX_VALUE / 100
-    val LISTS_COUNT = 3
+    const val BIG_VALUE = Int.MAX_VALUE / 100
+    const val LISTS_COUNT = 3
   }
 
   @Test
@@ -39,7 +36,7 @@ internal class MoreListOfListsTest
   {
     val original = listOf(
         listOf(null),
-        listOf(null,null)
+        listOf(null, null)
     )
 
     assertThrows<IllegalArgumentException> {

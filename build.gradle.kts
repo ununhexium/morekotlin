@@ -7,7 +7,7 @@ val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
 
 plugins {
-  val kotlinVersion = "1.2.31"
+  val kotlinVersion = "1.2.40"
 
   id("org.jetbrains.kotlin.jvm") version kotlinVersion
   java
