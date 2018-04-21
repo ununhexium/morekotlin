@@ -12,6 +12,8 @@ plugins {
   id("org.jetbrains.kotlin.jvm") version kotlinVersion
   java
   idea
+  maven
+  `maven-publish`
 }
 
 tasks.withType<KotlinCompile> {
@@ -54,4 +56,21 @@ buildscript {
 
 tasks.withType<Test> {
   useJUnitPlatform()
+}
+
+group = "net.lab0.kotlin.more"
+version = "0.1.0"
+
+val sourcesJar by tasks.creating(Jar::class) {
+  classifier = "sources"
+  from(java.sourceSets["main"].allSource)
+}
+
+publishing {
+  (publications) {
+    "mavenJava"(MavenPublication::class) {
+      from(components["java"])
+      artifact(sourcesJar)
+    }
+  }
 }
