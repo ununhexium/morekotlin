@@ -1,6 +1,6 @@
 package net.lab0.tools
 
-fun <T> List<List<T>>.more() = MoreListOfLists(this)
+fun <T> List<List<T>>.moreListOfLists() = MoreListOfLists(this)
 
 class MoreListOfLists<out T, out E>(element: E) :
     MoreIterableOfIterable<T, List<List<T>>>(element)

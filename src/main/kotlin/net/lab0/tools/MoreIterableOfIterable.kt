@@ -1,6 +1,6 @@
 package net.lab0.tools
 
-fun <T> Iterable<Iterable<T>>.more() = MoreIterableOfIterable(this)
+fun <T> Iterable<Iterable<T>>.moreIterOfIters() = MoreIterableOfIterable(this)
 
 open class MoreIterableOfIterable<out T, out E>(internal val element: E)
     where E : Iterable<Iterable<T>>

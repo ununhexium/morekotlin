@@ -28,7 +28,7 @@ internal class MoreListOfListsTest
         listOf(4, 8, 12)
     )
 
-    assertThat(original.more().zip()).isEqualTo(expected)
+    assertThat(original.moreListOfLists().zip()).isEqualTo(expected)
   }
 
   @Test
@@ -40,7 +40,7 @@ internal class MoreListOfListsTest
     )
 
     assertThrows<IllegalArgumentException> {
-      original.more().zip()
+      original.moreListOfLists().zip()
     }
   }
 }

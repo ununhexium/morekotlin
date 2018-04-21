@@ -1,7 +1,7 @@
 package net.lab0.tools
 
 
-fun String.more() = MoreStrings(this)
+fun String.moreStrings() = MoreStrings(this)
 
 class MoreStrings(private val string: String)
 {

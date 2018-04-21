@@ -22,7 +22,7 @@ internal class MoreIterableOfIterableTest
       }
       DynamicTest.dynamicTest(
           "For size $size",
-          { assertThat(lists.more().sameSizes()).isTrue() }
+          { assertThat(lists.moreIterOfIters().sameSizes()).isTrue() }
       )
     }
   }
@@ -38,7 +38,7 @@ internal class MoreIterableOfIterableTest
       }
       DynamicTest.dynamicTest(
           "For sizes ${it.joinToString()}",
-          { assertThat(lists.more().sameSizes()).isFalse() }
+          { assertThat(lists.moreIterOfIters().sameSizes()).isFalse() }
       )
     }
   }

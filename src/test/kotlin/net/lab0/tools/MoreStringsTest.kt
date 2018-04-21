@@ -8,7 +8,7 @@ class MoreStringsTest
   @Test
   fun `more !!!`()
   {
-    val more = "sample".more()
+    val more = "sample".moreStrings()
     assertThat(more).isNotNull
   }
 
@@ -24,7 +24,7 @@ class MoreStringsTest
           |
           |
           |BAR
-        """.trimMargin().more()
+        """.trimMargin().moreStrings()
     assertThat(more.collapseWhiteSpaces()).isEqualTo("ABC XYZ FOO BAR")
   }
 }

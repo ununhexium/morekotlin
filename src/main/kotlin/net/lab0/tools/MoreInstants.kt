@@ -3,7 +3,7 @@ package net.lab0.tools
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 
-fun Instant.more() = MoreInstants(this)
+fun Instant.moreInstants() = MoreInstants(this)
 
 class MoreInstants(private val element: Instant)
 {
