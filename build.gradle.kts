@@ -7,7 +7,7 @@ val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
 
 plugins {
-  val kotlinVersion = "1.2.40"
+  val kotlinVersion = "1.2.41"
 
   id("org.jetbrains.kotlin.jvm") version kotlinVersion
   java
@@ -59,7 +59,7 @@ tasks.withType<Test> {
 }
 
 group = "net.lab0.kotlin.more"
-version = "0.1.0"
+version = "0.1.1"
 
 val sourcesJar by tasks.creating(Jar::class) {
   classifier = "sources"
