@@ -7,4 +7,6 @@ class MoreStrings(private val string: String)
 {
   fun collapseWhiteSpaces() =
       string.replace(Regex("""\s+"""), " ")
+
+  
 }
