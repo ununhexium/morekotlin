@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import sun.security.pkcs.PKCS8Key.version
 
 val assertJVersion = "3.9.1"
 val coroutinesVersion = "0.22.5"

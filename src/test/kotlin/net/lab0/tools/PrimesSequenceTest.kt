@@ -2,10 +2,10 @@ package net.lab0.tools
 
 import com.google.common.io.Resources
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 import java.nio.charset.StandardCharsets
-import kotlin.system.measureNanoTime
 
 class PrimesSequenceTest
 {
@@ -37,7 +37,8 @@ class PrimesSequenceTest
   }
 
   @Test
-  @Tag("performance")
+  @Tag("manual")
+  @Disabled
   fun `show the execution speed for primes finder`()
   {
     val size = 1000

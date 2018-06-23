@@ -14,7 +14,7 @@ internal class MoreListsTest {
   }
 
   @Test
-  fun `list progression returns all the sublists`() {
+  fun `list progression returns all the sub-lists`() {
     val list = (0..4).toList()
     val expected = listOf(
         listOf(),
