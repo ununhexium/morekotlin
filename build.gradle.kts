@@ -7,6 +7,9 @@ val guavaVersion = "24.1-jre"
 val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
 
+group = "net.lab0.kotlin.more"
+version = "0.1.2"
+
 plugins {
   val kotlinVersion = "1.2.41"
 
@@ -30,8 +33,6 @@ idea {
 repositories {
   mavenCentral()
 }
-
-version = "0.1.0-SNAPSHOT"
 
 dependencies {
   compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -58,9 +59,6 @@ buildscript {
 tasks.withType<Test> {
   useJUnitPlatform()
 }
-
-group = "net.lab0.kotlin.more"
-version = "0.1.1"
 
 val sourcesJar by tasks.creating(Jar::class) {
   classifier = "sources"

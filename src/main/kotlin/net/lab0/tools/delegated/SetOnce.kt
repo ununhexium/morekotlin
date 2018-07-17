@@ -8,7 +8,7 @@ import kotlin.reflect.KProperty
  * Can't be accessed before it's set.
  */
 class SetOnce<T> {
-    var store: T? = null
+    private var store: T? = null
 
     operator fun getValue(thisRef: Any?, property: KProperty<*>): T =
         store ?: throw IllegalStateException("Access SetOnce before it's been set")

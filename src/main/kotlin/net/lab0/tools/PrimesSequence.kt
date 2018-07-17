@@ -13,7 +13,7 @@ val primes = buildSequence {
 
   while (true)
   {
-    val seq = generateSequence(lastPrime, { it + 2 })
+    val seq = generateSequence(lastPrime) { it + 2 }
     val nextPrime = seq.first { candidate ->
       previousPrimes.none { prime ->
         candidate % prime == 0L
