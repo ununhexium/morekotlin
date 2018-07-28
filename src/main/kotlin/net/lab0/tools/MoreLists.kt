@@ -33,10 +33,9 @@ class MoreLists<T>(val element: List<T>) {
    * ]
    * ```
    */
-  fun listProgression() = listOf(this.element)
-      .flatMap { list ->
-        (0..list.size).map { quantity ->
-          list.take(quantity)
-        }
+  fun listProgression() =
+      (0..this.element.size).map { quantity ->
+        this.element.subList(0, quantity)
       }
+
 }
