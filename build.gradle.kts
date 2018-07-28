@@ -35,13 +35,14 @@ repositories {
 }
 
 dependencies {
+  compile("com.google.guava:guava:$guavaVersion")
+
   compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   compile("org.jetbrains.kotlin:kotlin-reflect")
   compile("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 
   testImplementation("org.assertj:assertj-core:$assertJVersion")
   testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-  testImplementation("com.google.guava:guava:$guavaVersion")
 
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
