@@ -8,7 +8,7 @@ val junitPlatformVersion = "1.0.1"
 val junitJupiterVersion = "5.1.0"
 
 group = "net.lab0.kotlin.more"
-version = "0.1.2"
+version = "0.1.3"
 
 plugins {
   val kotlinVersion = "1.2.41"
