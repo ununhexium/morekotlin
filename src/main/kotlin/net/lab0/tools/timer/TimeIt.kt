@@ -31,9 +31,16 @@ class TimeIt(private val function: () -> Unit) {
         return runs.sum() / runs.size
     }
 
-    fun warmup(): TimeIt {
-        this.during(Duration.of(10, ChronoUnit.SECONDS))
+    fun warmup(duration:Duration = Duration.of(10, ChronoUnit.SECONDS)): TimeIt {
+        this.during(duration)
         return this
+    }
+
+    fun autoTimeRepeat(n: Int): TimingReport {
+        val before = this.repeated(n)
+        this.warmup()
+        val after = this.repeated(n)
+        return TimingReport(before, after)
     }
 }
 

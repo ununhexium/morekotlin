@@ -7,10 +7,14 @@ import java.time.Duration
 import java.time.temporal.ChronoUnit
 
 class TimeItTest {
-    fun compute() {
+    private fun compute() {
         (0..1000).map {
             Math.hypot(it.toDouble(), 2 * it.toDouble())
         }
+    }
+
+    companion object {
+      val duration = Duration.of(1, ChronoUnit.SECONDS)
     }
 
     private fun timeIt() = TimeIt(::compute)
@@ -31,8 +35,14 @@ class TimeItTest {
     fun `can warmup the JVM`() {
         val timeIt = timeIt()
         val before = timeIt.repeated(100)
-        timeIt.warmup()
+        timeIt.warmup(duration)
         val after = timeIt.repeated(100)
         assertTrue(before > after)
+    }
+    
+    @Test
+    fun `can test and report automatically`(){
+        val report = timeIt().autoTimeRepeat(1000)
+        assertTrue(report.beforeWarmUp > report.afterWarmup)
     }
 }
