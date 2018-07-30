@@ -5,6 +5,10 @@ import java.time.temporal.ChronoUnit
 import kotlin.system.measureNanoTime
 
 class TimeIt(private val function: () -> Unit) {
+    companion object {
+      val defaultWarmupDuration = Duration.of(10, ChronoUnit.SECONDS)
+    }
+
     /**
      * @param n How many runs to do to measure the time it takes.
      * @return The average time for 1 run.
@@ -31,14 +35,14 @@ class TimeIt(private val function: () -> Unit) {
         return runs.sum() / runs.size
     }
 
-    fun warmup(duration:Duration = Duration.of(10, ChronoUnit.SECONDS)): TimeIt {
+    fun warmup(duration:Duration = defaultWarmupDuration): TimeIt {
         this.during(duration)
         return this
     }
 
-    fun autoTimeRepeat(n: Int): TimingReport {
+    fun autoTimeRepeat(n: Int, warmupDuration:Duration = defaultWarmupDuration): TimingReport {
         val before = this.repeated(n)
-        this.warmup()
+        this.warmup(warmupDuration)
         val after = this.repeated(n)
         return TimingReport(before, after)
     }

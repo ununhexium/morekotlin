@@ -39,10 +39,10 @@ class TimeItTest {
         val after = timeIt.repeated(100)
         assertTrue(before > after)
     }
-    
+
     @Test
     fun `can test and report automatically`(){
-        val report = timeIt().autoTimeRepeat(1000)
+        val report = timeIt().autoTimeRepeat(10)
         assertTrue(report.beforeWarmUp > report.afterWarmup)
     }
 }
