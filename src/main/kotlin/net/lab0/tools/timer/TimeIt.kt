@@ -25,14 +25,14 @@ class TimeIt(private val function: () -> Unit) {
      * @return The average time for 1 run.
      */
     fun during(duration: Duration): Long {
-        val start = System.nanoTime()
-        val runs = mutableListOf<Long>()
-        while (runs.sum() < duration.toNanos()) {
-            runs.add(
-                measureNanoTime(function)
-            )
+        val nanos = duration.toNanos()
+        var total = 0L
+        var runs = 0L
+        while (total < nanos) {
+            total += measureNanoTime(function)
+            runs++
         }
-        return runs.sum() / runs.size
+        return total / runs
     }
 
     fun warmup(duration:Duration = defaultWarmupDuration): TimeIt {
